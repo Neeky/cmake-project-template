@@ -16,7 +16,7 @@ add_subdirectory(src/tools)
 add_executable(project-template ${src_files})
 target_link_libraries(project-template tools)
 
-# 增加测试
+# 下载 googletest
 include(FetchContent)
 FetchContent_Declare(
   googletest
@@ -27,4 +27,5 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
+# 测试
 include(tests/CMakeLists.txt)
